@@ -1,18 +1,14 @@
 import 'normalize.css';
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Wrapper = styled.footer`
-position: relative;
-background-color: #081C24;
+position: absolute;
+bottom: 0;
 width: 100%;
-padding: 2%;
+background-color: #081C24;
 border-top: 1px solid #D2691E;
-@media (min-width: 320px) {
-  padding: 2%;
-}
 `
 
 const NavMenu = styled.ul`
@@ -60,5 +56,3 @@ export const Footer = () => {
     </Wrapper>
   );
 }
-
-export default connect(null)(Footer);

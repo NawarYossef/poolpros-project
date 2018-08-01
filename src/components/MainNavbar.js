@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import 'normalize.css';
 import styled from 'styled-components';
-// import '../styles/main.css';
+import '../styles/main.css';
+import { FindPoolButton } from './FindPoolButton';
 
 const NavBar = styled.nav`
   flex: auto;
@@ -12,7 +13,7 @@ const List = styled.ul`
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   list-style-type: none;
   margin-bottom: 0px;
   @media (min-width: 320px) {
@@ -42,7 +43,7 @@ const NavLink = styled(Link)`
     font-size: 1em !important;
   }
   @media (min-width: 425px) {
-    font-size: 1.3em !important;
+    font-size: 0.8em !important;
   }
 `;
 
@@ -51,12 +52,11 @@ export const MainNavbar = () => {
     <NavLink to="/community">Pools & Spas</NavLink>,
     <NavLink to="/community">Supplies</NavLink>,
     <NavLink to="/community">Resources</NavLink>,
-    <NavLink to="/community">Services</NavLink>,
-    <NavLink to="/community">Find a Pool Pro</NavLink>
+    <NavLink to="/community">Services</NavLink>
   ];
 
   return (
-    <NavBar>
+    <NavBar className={"main-nav-menu"}>
       <List>
         {links.map((link, idx) => {
           return (
@@ -65,6 +65,7 @@ export const MainNavbar = () => {
             </ListElement>
           );
         })}
+        <FindPoolButton />
       </List>
     </NavBar>
   );

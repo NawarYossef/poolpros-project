@@ -1,0 +1,149 @@
+/* ===========*/
+/* body */
+/* ===========*/
+#root {
+  /* background-color: #
+  051929; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  display: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===========*/
+/* App Logo */
+/* ===========*/
+.app-logo {
+    width: 40%;
+}
+
+/* ===========*/
+/* Nav bars */
+/* ===========*/
+ul {
+  margin-top: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-nav-menu a {
+  color: #083D8C !important;
+}
+
+.find-pool-btn {
+  color: #083D8C !important;
+  background-color: transparent;
+  margin-left: auto;
+}
+
+.location-icon {
+  width: 10%;
+}
+
+.second-link-top-menu, .filter-btns-wrapper button {
+  margin-right: 0px !important;
+}
+
+/* ===========*/
+/* Body */
+/* ===========*/
+
+.main-section-image {
+  margin-top: 27px;
+  width: 100%;
+  clear: both;
+}
+
+/* ===========*/
+/* filter results section */
+/* ===========*/
+
+.filter-btns-wrapper button {
+  background: transparent;
+  border: none;
+  color: #4b4b4b;
+}
+.filter-btns-wrapper button:hover {
+  color: #4b4b4b;
+}
+
+/* ===========*/
+/* check-box */
+/* ===========*/
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ top: 9px;
+left: 9px;
+width: 8px;
+height: 8px;
+
+background: white;
+}
+
+/* ===========*/
+/* footer */
+/* ===========*/

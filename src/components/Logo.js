@@ -1,8 +1,9 @@
-import React from '../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react';
-import { Link } from '../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PoolProsLogo from '../assets/pool-pros-logo.png'
 import 'normalize.css';
 import styled from 'styled-components';
+import '../styles/main.css';
 
 
 const WrapperForAppTitle = styled(Link)`

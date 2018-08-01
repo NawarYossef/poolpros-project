@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { FilterButtons } from '../components/FilterButtons';
 import 'normalize.css';
 import styled from 'styled-components';
-import { MainNavbar } from '../components/MainNavbar';
-import { Logo } from '../components/Logo';
+import WaterImage from '../assets/water-image.png'
 import '../styles/main.css';
 
-const AppHeader = styled.nav`
+const FilterResultsWrapper = styled.section`
 width: 100%;
 background-color: #ffffff;
-padding: 30px 0px;
-box-shadow: 0 0 10px -2px rgba(41, 38, 38, 0.7);
--webkit-box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.7);
-
+padding: 0px 0px;
+position: absolute;
+top: 70%;
 `;
 
-const HeaderWrapper = styled.div`
+const ListWrapper = styled.div`
 max-width: 88.5%;
 margin: 0 auto;
 height: 100%;
+background: #f6f6f6;
 display: flex;
 align-items: center;
+border-radius: 5px;
 @media (min-width: 320px) {
   flex-direction: column;
 }
@@ -35,15 +36,14 @@ align-items: center;
 }
 `;
 
-export default class MainHeader extends Component {
+export default class FilterResultsMenu extends Component {
   render() {
     return (
-      <AppHeader>
-        <HeaderWrapper>
-          <Logo />
-          <MainNavbar />
-        </HeaderWrapper>
-      </AppHeader>
+      <FilterResultsWrapper>
+        <ListWrapper>
+          <FilterButtons />
+        </ListWrapper>
+      </FilterResultsWrapper>
     );
   }
 }
