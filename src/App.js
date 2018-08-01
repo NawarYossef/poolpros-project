@@ -32,10 +32,10 @@ class App extends Component {
           <TopHeader />
           <MainHeader />
           <Main />
+          <Route exact path="/" />
+          
           <Route exact path="/dealers-distributors" />
           <Route exact path="/service" />
-
-          <Route exact path="/" />
 
           <Route exact path="/pools-specs" />
           <Route exact path="/supplies" />

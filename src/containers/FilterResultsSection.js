@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { FilterButtons } from '../components/FilterButtons';
 import 'normalize.css';
 import styled from 'styled-components';
-import WaterImage from '../assets/water-image.png'
 import '../styles/main.css';
 
 const FilterResultsWrapper = styled.section`
@@ -11,7 +10,7 @@ width: 100%;
 background-color: #ffffff;
 padding: 0px 0px;
 position: absolute;
-top: 70%;
+top: 69%;
 `;
 
 const ListWrapper = styled.div`
@@ -36,7 +35,7 @@ border-radius: 5px;
 }
 `;
 
-export default class FilterResultsMenu extends Component {
+export default class FilterResultsSection extends Component {
   render() {
     return (
       <FilterResultsWrapper>

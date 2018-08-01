@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import FilterResultsMenu from '../containers/FilterResultsMenu';
+import FilterResultsSection from '../containers/FilterResultsSection';
 import 'normalize.css';
 import styled from 'styled-components';
 import WaterImage from '../assets/water-image.png'
@@ -18,7 +18,7 @@ export default class Main extends Component {
     return (
       <MainSection>
         <img src={WaterImage} className={'main-section-image'} alt="" />
-        <FilterResultsMenu />
+        <FilterResultsSection />
       </MainSection>
     );
   }
