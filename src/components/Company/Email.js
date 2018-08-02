@@ -27,7 +27,7 @@ export const Email = props => {
   
   return (
     <Wrapper>
-    <Button onClick={() => props.handleModalButton(props.companyId)}>
+    <Button onClick={() => props.handleModalButtonAndStoreCompanyId(props.companyId)}>
     <img src={EmailImg} className={'email-icon-img'} alt="" />
     Contact this Pro
     </Button>

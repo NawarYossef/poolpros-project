@@ -28,7 +28,7 @@ export const SearchResults = props => {
      {props.Data.dealers.map(dealer => 
       <CompanySection 
       company={dealer.data}
-      handleModalButton={props.handleModalButton} />
+      handleModalButtonAndStoreCompanyId={props.handleModalButtonAndStoreCompanyId} />
     )}
      </Wrapper> 
     </Results>

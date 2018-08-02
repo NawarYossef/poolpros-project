@@ -22,24 +22,33 @@ export default class Main extends Component {
       resultCount: 0,
       checked: false,
       btnClicked: false,
-      companyId: 0
+      companyId: 0,
+      userIsTyping: false,
+      formSubmitValid: false,
     }
   }
 
-  handleModalButton = id => {
+  handleModalButtonAndStoreCompanyId = companyId => {
     this.setState({
       btnClicked: !this.state.btnClicked,
-      companyId: id
+      companyId
     });
   };
 
+  handleSubmit = e => {
+    e.preventDefault();
+  };
+
   render() {
+    console.log('------------------------------------');
+    console.log(window.innerHeight);
+    console.log('------------------------------------');
     return (
       <MainSection>
         <img src={WaterImage} className={'main-section-image'} alt="" />
         <FilteringForm />
-        <SearchResults Data={DealersData} handleModalButton={this.handleModalButton}/>
-        {this.state.btnClicked ? <Modal handleModalButton={this.handleModalButton} companyId={this.state.companyId}/> : null}
+        <SearchResults Data={DealersData} handleModalButtonAndStoreCompanyId={this.handleModalButtonAndStoreCompanyId}/>
+        {this.state.btnClicked ? <Modal handleModalButtonAndStoreCompanyId={this.handleModalButtonAndStoreCompanyId} companyId={this.state.companyId}/> : null}
       </MainSection>
     );
   }

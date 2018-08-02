@@ -4,7 +4,7 @@ import 'normalize.css';
 import styled from 'styled-components';
 import '../../styles/main.css';
 
-const Wrapper = styled.article`
+const Wrapper = styled.div`
 padding-right: 20px;
 padding-left: 32px;
 padding-top: 20px;
@@ -36,7 +36,7 @@ position: relative;
 export const ModalHeader = props => {
   return (
     <Wrapper>
-    <CloseButton onClick={props.onClick}>x</CloseButton>
+      <CloseButton onClick={props.onClick}>x</CloseButton>
       <Text>Email:</Text>
       <Name>{props.name}</Name>
     </Wrapper>

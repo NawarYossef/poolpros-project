@@ -29,7 +29,7 @@ export const CompanySection = props => {
       <MessageForEmail />
       <Email
         email={props.company.email}
-        handleModalButton={props.handleModalButton}
+        handleModalButtonAndStoreCompanyId={props.handleModalButtonAndStoreCompanyId}
         companyId={props.company.companyID}
       />
       <Hours hours={props.company.weekHours} />
