@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import 'normalize.css';
 import styled from 'styled-components';
-import { TopNavbar } from '../components/TopNavbar';
-import '../styles/main.css';
+import { TopNavbar } from './TopNavbar';
+import '../../styles/main.css';
 
 const AppHeader = styled.nav`
 width: 100%;
@@ -34,14 +34,12 @@ align-items: flex-end;
 }
 `;
 
-export default class TopHeader extends Component {
-  render() {
-    return (
-      <AppHeader>
-        <HeaderWrapper>
-          <TopNavbar />
-        </HeaderWrapper>
-      </AppHeader>
-      );
-    }
+export const TopHeader = () => {
+  return (
+    <AppHeader>
+      <HeaderWrapper>
+        <TopNavbar />
+      </HeaderWrapper>
+    </AppHeader>
+  );
 }

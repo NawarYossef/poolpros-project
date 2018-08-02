@@ -1,9 +1,9 @@
 import 'normalize.css';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import LocationIcon from '../assets/location-icon.png'
+import LocationIcon from '../../assets/location-icon.png'
 import styled from 'styled-components';
-import '../styles/main.css';
+import '../../styles/main.css';
 
 const LocationButtonWrapper = styled.div`
 display: flex;

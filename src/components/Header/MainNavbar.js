@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import 'normalize.css';
 import styled from 'styled-components';
-import '../styles/main.css';
 import { FindPoolButton } from './FindPoolButton';
+import '../../styles/main.css';
 
 const NavBar = styled.nav`
   flex: auto;

@@ -3,27 +3,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckBox } from './CheckBox';
 import styled from 'styled-components';
-import '../styles/main.css';
-import { TooTip } from './ToolTip';
-
-const ButtonsSectionWrapper = styled.div`
-  flex: auto;
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  padding: 31px 0px;
-`;
-const InnerWrapper = styled.div`
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-end;
-`;
+import '../../styles/main.css';
 
 const List = styled.ul`
-  flex: 1;
   height: 100%;
   display: flex;
+  flex: 1;
   padding-left: 0px;
   justify-content: flex-end;
   list-style-type: none;
@@ -65,20 +50,15 @@ export const FilterButtons = () => {
   ];
 
   return (
-    <ButtonsSectionWrapper className={"filter-btns-wrapper"}>
-      <InnerWrapper>
-        <List>
-          {buttons.map((button, idx) => {
-            return (
-              <ListElement key={idx.toString()} className="link">
-                <CheckBox />
-                {button}
-              </ListElement>
-            );
-          })}
-          <TooTip />
-        </List>
-      </InnerWrapper>
-    </ButtonsSectionWrapper>
+    <List>
+      {buttons.map((button, idx) => {
+        return (
+          <ListElement key={idx.toString()} className="link">
+            <CheckBox />
+            {button}
+          </ListElement>
+        );
+      })}
+    </List>
   );
 }

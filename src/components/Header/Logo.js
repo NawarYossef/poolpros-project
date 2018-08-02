@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import PoolProsLogo from '../assets/pool-pros-logo.png'
+import PoolProsLogo from '../../assets/pool-pros-logo.png'
 import 'normalize.css';
 import styled from 'styled-components';
-import '../styles/main.css';
-
+import '../../styles/main.css';
 
 const WrapperForAppTitle = styled(Link)`
 flex: auto;
@@ -15,7 +14,6 @@ text-align: initial;
   text-decoration: none;
 }
 `;  
-
 
 export const Logo = () => {
   return (

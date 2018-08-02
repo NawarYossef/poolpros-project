@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { FilterButtons } from '../components/FilterButtons';
 import 'normalize.css';
 import styled from 'styled-components';
-import '../styles/main.css';
+import { MainNavbar } from './MainNavbar';
+import { Logo } from './Logo';
+import '../../styles/main.css';
 
-const FilterResultsWrapper = styled.section`
+const AppHeader = styled.nav`
 width: 100%;
 background-color: #ffffff;
-padding: 0px 0px;
-position: absolute;
-top: 69%;
+padding: 30px 0px;
+box-shadow: 0 0 10px -2px rgba(41, 38, 38, 0.7);
+-webkit-box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.7);
+
 `;
 
-const ListWrapper = styled.div`
+const HeaderWrapper = styled.div`
 max-width: 88.5%;
 margin: 0 auto;
 height: 100%;
-background: #f6f6f6;
 display: flex;
 align-items: center;
-border-radius: 5px;
 @media (min-width: 320px) {
   flex-direction: column;
 }
@@ -35,14 +35,13 @@ border-radius: 5px;
 }
 `;
 
-export default class FilterResultsSection extends Component {
-  render() {
-    return (
-      <FilterResultsWrapper>
-        <ListWrapper>
-          <FilterButtons />
-        </ListWrapper>
-      </FilterResultsWrapper>
-    );
-  }
+export const MainHeader = () => {
+  return (
+    <AppHeader>
+      <HeaderWrapper>
+        <Logo />
+        <MainNavbar />
+      </HeaderWrapper>
+    </AppHeader>
+  );
 }

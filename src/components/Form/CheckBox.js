@@ -1,6 +1,6 @@
 import 'normalize.css';
 import React from 'react';
-import '../styles/main.css';
+import '../../styles/main.css';
 
 
 export const CheckBox = () => {

@@ -2,9 +2,6 @@
 /* body */
 /* ===========*/
 #root {
-  /* background-color: #
-  051929; */
-  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -12,11 +9,12 @@
 html, body {
   padding: 0;
   margin: 0;
-  display: relative;
-  width: 100%;
-  height: 100%;
+ 
 }
 
+body {
+  position: relative !important;
+}
 /* ===========*/
 /* App Logo */
 /* ===========*/
@@ -49,7 +47,7 @@ a {
   width: 10%;
 }
 
-.second-link-top-menu, .filter-btns-wrapper button {
+.second-link-top-menu, .filter-list-wrapper button {
   margin-right: 0px !important;
 }
 
@@ -58,7 +56,7 @@ a {
 /* ===========*/
 
 .main-section-image {
-  margin-top: 27px;
+  margin-top: 3px;
   width: 100%;
   clear: both;
 }
@@ -67,20 +65,20 @@ a {
 /* filter results section */
 /* ===========*/
 
-.filter-btns-wrapper button {
+.filter-list-wrapper button {
   background: transparent;
   border: none;
   color: #4b4b4b;
 }
-.filter-btns-wrapper button:hover {
+.filter-list-wrapper button:hover {
   color: #4b4b4b;
 }
 
 /* ===========*/
 /* check-box */
 /* ===========*/
+/* Author: w3School */
 
-/* The container */
 .container {
   display: block;
   position: relative;
@@ -94,14 +92,12 @@ a {
   user-select: none;
 }
 
-/* Hide the browser's default radio button */
 .container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-/* Create a custom radio button */
 .checkmark {
   position: absolute;
   top: -6px;
@@ -113,24 +109,20 @@ a {
 
 }
 
-/* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
   background-color: #2196F3;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
 .container input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the indicator (dot/circle) */
 .container .checkmark:after {
  top: 8px;
 left: 7.7px;
@@ -149,6 +141,39 @@ background: white;
   width: 19px;
   margin-left: 8px;
 }
+
+.border-img {
+  margin-right: 31px;
+}
+
+.phone-icon-desktop {
+  width: 28px;
+  height: 28px;
+  margin-right: 15px;
+}
+
+.email-icon-img {
+  width: 15px;
+  height: 13px;
+  padding-right: 13px;
+}
+
+/* ===========*/
+/* service section */
+/* ===========*/
+.service-img {
+  width: 13px;
+  margin-right: 13px;
+}
 /* ===========*/
 /* footer */
 /* ===========*/
+.footer-logo {
+  padding-top: 36px;
+  padding-bottom: 27px;
+}
+
+.footer-icon {
+  width: 17px;
+  height: 16px;
+}
