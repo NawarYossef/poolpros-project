@@ -81,7 +81,6 @@ export default class ModalForm extends Component {
       phoneNumber: "",
       email: "",
       comments: "",
-      userOwnsPool: false,
       userIsTyping: false,
       formSubmitValid: false
     };
@@ -89,11 +88,16 @@ export default class ModalForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+   
   };
 
   handleCheckBoxToggle = e => {
-    
-  }
+    if (e.target.value === "yes") {
+      document.getElementById("check_2").checked = false;
+    } else if (e.target.value === "no") {
+      document.getElementById("check_1").checked = false;
+    }
+  };
 
   render() {
     return (
@@ -177,7 +181,7 @@ export default class ModalForm extends Component {
             <FieldTitle>Do you currently own a pool or a spa?</FieldTitle>
             <span>Optional</span>
           </FieldWrapper>
-          <PoolQuestion handleCheckBoxToggle={this.handleCheckBoxToggle}/>
+          <PoolQuestion handleCheckBoxToggle={this.handleCheckBoxToggle} />
           <Line />
           <SendEmailButton />
         </Form>
