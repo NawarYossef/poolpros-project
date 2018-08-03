@@ -1,5 +1,5 @@
 import "normalize.css";
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import "../../styles/main.css";
 

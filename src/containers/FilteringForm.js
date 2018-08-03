@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import { FormTitle } from "../components/Form/FormTitle";
 import { ResultCount } from "../components/Form/ResultCount";
 import { FilterButtons } from "../components/Form/FilterButtons";

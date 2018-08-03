@@ -1,5 +1,5 @@
 import "normalize.css";
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -13,7 +13,7 @@ const Message = styled.p`
   font-style: italic;
   font-size: 12px;
 `;
-const Button = styled.button``;
+
 export const MessageForEmail = () => {
   return (
     <Wrapper>

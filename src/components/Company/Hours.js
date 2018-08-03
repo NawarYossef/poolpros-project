@@ -1,6 +1,5 @@
 import "normalize.css";
-import React, { Component } from "react";
-import EmailImg from "../../assets/email-icon.png";
+import React from "react";
 import styled from "styled-components";
 import "../../styles/main.css";
 

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { CompanySection } from "./Company/CompanySection";
 import "normalize.css";
 import styled from "styled-components";
@@ -25,14 +25,16 @@ export const SearchResults = props => {
   return (
     <Results>
       <Wrapper>
-        {props.data && props.data.map(company => (
-          <CompanySection
-            company={company.data}
-            handleModalButtonAndStoreCompanyId={
-              props.handleModalButtonAndStoreCompanyId
-            }
-          />
-        ))}
+        {props.data &&
+          props.data.map((company, idx) => (
+            <CompanySection
+              key={idx.toString()}
+              company={company.data}
+              handleModalButtonAndStoreCompanyId={
+                props.handleModalButtonAndStoreCompanyId
+              }
+            />
+          ))}
       </Wrapper>
     </Results>
   );

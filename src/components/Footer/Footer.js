@@ -1,6 +1,5 @@
 import "normalize.css";
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import { LogoFooter } from "./LogoFooter";
 import styled from "styled-components";
 import "../../styles/main.css";

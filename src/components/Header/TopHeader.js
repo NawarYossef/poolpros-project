@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import "normalize.css";
 import styled from "styled-components";
 import { TopNavbar } from "./TopNavbar";

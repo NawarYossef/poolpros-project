@@ -1,5 +1,5 @@
 import "normalize.css";
-import React, { Component } from "react";
+import React from "react";
 import PhoneIcon from "../../assets/phone-icon-desktop.png";
 import styled from "styled-components";
 import "../../styles/main.css";

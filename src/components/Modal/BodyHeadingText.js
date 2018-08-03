@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "normalize.css";
 import styled from "styled-components";
 import "../../styles/main.css";

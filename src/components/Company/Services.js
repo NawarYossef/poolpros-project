@@ -1,5 +1,5 @@
 import "normalize.css";
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import "../../styles/main.css";
 
@@ -33,13 +33,14 @@ export const Services = props => {
   return (
     <Container>
       <Wrapper>
-        {props.certifications.map(service => {
+        {props.certifications.map((service, idx) => {
           let imgSrc = service.split(" ").join("-");
           return (
-            <ElementWrapper className={"service-flex-item"}>
+            <ElementWrapper className={"service-flex-item"} key={idx.toString()}>
               <img
                 src={require(`../../assets/${imgSrc}.png`)}
                 className={"service-img"}
+                alt="img"
               />
               {service}
             </ElementWrapper>

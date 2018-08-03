@@ -1,5 +1,5 @@
 import "normalize.css";
-import React, { Component } from "react";
+import React from "react";
 import { Title } from "./Title";
 import { Hours } from "./Hours";
 import { Phone } from "./Phone";

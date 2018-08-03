@@ -1,5 +1,5 @@
 import "normalize.css";
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import LocationIcon from "../../assets/location-icon.png";
 import styled from "styled-components";
@@ -20,7 +20,7 @@ const LocationButtonWrapper = styled.div`
 export const FindPoolButton = () => {
   return (
     <LocationButtonWrapper className="find-pool-wrapper">
-      <img src={LocationIcon} className={"location-icon"} />
+      <img src={LocationIcon} className={"location-icon"} alt="img"/>
       <Link to={"/find-pool-pro"} className={"find-pool-btn"}>
         Find a Pool Pro
       </Link>

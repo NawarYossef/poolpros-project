@@ -50,15 +50,17 @@ export default class Main extends Component {
         });
   };
   render() {
-    const {DealersData} = this.props
+    const { DealersData } = this.props;
     let companiesData = [];
     if (this.state.checkBoxValues.length) {
       companiesData = DealersData.dealers.filter(dealer => {
-        return dealer.data.certifications.length ===
+        return (
+          dealer.data.certifications.length ===
           dealer.data.certifications
             .concat(this.state.checkBoxValues)
-            .filter((val, idx, arr) => arr.indexOf(val) === idx).length;
-      }); 
+            .filter((val, idx, arr) => arr.indexOf(val) === idx).length
+        );
+      });
     } else {
       companiesData = DealersData.dealers;
     }

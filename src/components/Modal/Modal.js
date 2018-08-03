@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import DealersData from "../../dealers-data";
 import { ModalHeader } from "./ModalHeader";
 import ModalForm from "./ModalForm";

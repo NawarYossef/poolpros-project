@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { MainHeader } from "./components/Header/MainHeader";
 import { TopHeader } from "./components/Header/TopHeader";
 import Main from "./containers/Main";
@@ -9,7 +9,7 @@ export const Layout = ({ children, DealersData }) => {
     <React.Fragment>
       <TopHeader />
       <MainHeader />
-      <Main DealersData={DealersData}/>
+      <Main DealersData={DealersData} />
       {children}
       <Footer />
     </React.Fragment>
