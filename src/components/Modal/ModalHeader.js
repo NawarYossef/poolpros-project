@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import DealersData from "../../dealers-data";
 import "normalize.css";
 import styled from "styled-components";
 import "../../styles/main.css";

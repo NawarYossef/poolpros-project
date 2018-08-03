@@ -28,7 +28,7 @@ const ElementWrapper = styled.li`
   font-size: 12px;
   margin-top: 11px;
 `;
-const CompanyName = styled.h1``;
+
 export const Services = props => {
   return (
     <Container>

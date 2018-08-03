@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import { Router, Route } from "react-router-dom";
-import { MainHeader } from "./components/Header/MainHeader";
-import { TopHeader } from "./components/Header/TopHeader";
-import Main from "./containers/Main";
-import { Footer } from "./components/Footer/Footer";
 import { Layout } from "./Layout";
 import history from "./history";
 import styled from "styled-components";

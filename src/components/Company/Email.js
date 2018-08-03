@@ -9,12 +9,7 @@ const Wrapper = styled.div`
   padding: 0px 40px;
   padding-top: 33px;
 `;
-const Message = styled.p`
-  margin: 0px;
-  padding: 0px;
-  font-style: italic;
-  font-size: 12px;
-`;
+
 const Button = styled.button`
   padding: 16px 15px;
   border: 1px solid #02c7c6;
