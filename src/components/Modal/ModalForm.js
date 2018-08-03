@@ -65,6 +65,7 @@ const Textarea = styled.input`
   padding-left: 13px;
 `;
 const Line = styled.hr`
+  clear: both;
   color: #ececec;
   height: 2px;
   border: 0;
@@ -89,6 +90,10 @@ export default class ModalForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
   };
+
+  handleCheckBoxToggle = e => {
+    
+  }
 
   render() {
     return (
@@ -172,7 +177,7 @@ export default class ModalForm extends Component {
             <FieldTitle>Do you currently own a pool or a spa?</FieldTitle>
             <span>Optional</span>
           </FieldWrapper>
-          <PoolQuestion />
+          <PoolQuestion handleCheckBoxToggle={this.handleCheckBoxToggle}/>
           <Line />
           <SendEmailButton />
         </Form>

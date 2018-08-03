@@ -95,20 +95,50 @@ a {
 /* ===========*/
 
 /* code for removing spinner from input type number */
+
 /* For Firefox */
+
 input[type='number'] {
-  -moz-appearance:textfield;
+  -moz-appearance: textfield;
 }
+
 /* Webkit browsers like Safari and Chrome */
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
+.check-box-wrapper input[type="checkbox"]:not(:checked), input[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999%;
+}
+
+.check-box-wrapper input[type="checkbox"]+label {
+  width: 50px;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  box-sizing: border-box;
+  color: black;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.check-box-wrapper input[type="checkbox"]:checked+label {
+  border: 1px solid white;
+  background-color: #01c7c6;
+  border: 1px solid black;
+  color: black;
+  box-sizing: border-box;
+}
+
 /* ===========*/
 
-/* check-box */
+/* filter form check-box */
 
 /* ===========*/
 

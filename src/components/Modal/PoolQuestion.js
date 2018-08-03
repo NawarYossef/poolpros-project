@@ -9,20 +9,32 @@ const BtnsWrapper = styled.div`
   padding-left: 13px;
   margin-top: 4px;
 `;
-const Button = styled.button`
-  width: 63px;
-  height: 30px;
-  margin-right: 7px;
-  margin-bottom: 20px;
-  border-radius: 3px;
-  border: 1px solid #000;
-  background: transparent;
+
+const List = styled.ul`
+  display: block;
+  padding: 0;
+  margin: 0;
+`;
+
+const Element = styled.li`
+  list-style-type: none;
+  list-style-position: outside;
+  float: left;
+  padding-right: 10px;
 `;
 export const PoolQuestion = props => {
   return (
     <BtnsWrapper>
-      <Button>Yes</Button>
-      <Button>No</Button>
+      <List className="check-box-wrapper">
+        <Element>
+          <input type="checkbox" id="check_1" name="check_1" value="check_1" onClick={e => props.handleCheckBoxToggle(e)}/>
+          <label for="check_1">Yes</label>
+        </Element>
+        <Element>
+          <input type="checkbox" id="check_2" name="check_2" value="check_2" onClick={e => props.handleCheckBoxToggle(e)}/>
+          <label for="check_2">No</label>
+        </Element>
+      </List>
     </BtnsWrapper>
   );
 };
