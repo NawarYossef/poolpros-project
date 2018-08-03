@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FilteringForm from './FilteringForm';
+import { FilteringForm } from './FilteringForm';
 import { SearchResults } from '../components/SearchResults';
 import { Modal } from '../components/Modal/Modal';
 import DealersData from '../dealers-data'
@@ -23,8 +23,8 @@ export default class Main extends Component {
       checked: false,
       btnClicked: false,
       companyId: 0,
-      userIsTyping: false,
       formSubmitValid: false,
+      checkBoxValues: []
     }
   }
 
@@ -39,16 +39,16 @@ export default class Main extends Component {
     e.preventDefault();
   };
 
+  handleInputChange = () => {
+
+  }
   render() {
-    console.log('------------------------------------');
-    console.log(window.innerHeight);
-    console.log('------------------------------------');
     return (
       <MainSection>
         <img src={WaterImage} className={'main-section-image'} alt="" />
-        <FilteringForm />
-        <SearchResults Data={DealersData} handleModalButtonAndStoreCompanyId={this.handleModalButtonAndStoreCompanyId}/>
-        {this.state.btnClicked ? <Modal handleModalButtonAndStoreCompanyId={this.handleModalButtonAndStoreCompanyId} companyId={this.state.companyId}/> : null}
+        <FilteringForm checkBoxValues={this.props.checkBoxValues} handleInputChange={this.props.handleInputChange}/>
+        <SearchResults Data={DealersData} handleModalButtonAndStoreCompanyId={this.handleModalButtonAndStoreCompanyId} />
+        {this.state.btnClicked ? <Modal handleModalButtonAndStoreCompanyId={this.handleModalButtonAndStoreCompanyId} companyId={this.state.companyId} /> : null}
       </MainSection>
     );
   }

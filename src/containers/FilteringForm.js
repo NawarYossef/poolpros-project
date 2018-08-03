@@ -54,22 +54,20 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-export default class FilterSearchForm extends Component {
-  render() {
-    return (
-      <FormWrapper>
-        <InnerWrapper>
-          <List className={"filter-list-wrapper"}>
-            <Wrapper>
-              <ResultCount />
-              <img src={Rectangle} alt="" className={'border-img'}/>
-              <FormTitle />
-              <FilterButtons />
-              <TooTip />
-            </Wrapper>
-          </List>
-        </InnerWrapper>
-      </FormWrapper>
-    );
-  }
+export const FilteringForm = props => {
+  return (
+    <FormWrapper>
+      <InnerWrapper>
+        <List className={"filter-list-wrapper"}>
+          <Wrapper>
+            <ResultCount />
+            <img src={Rectangle} alt="" className={'border-img'} />
+            <FormTitle />
+            <FilterButtons handleInputChange={props.handleInputChange}/>
+            <TooTip />
+          </Wrapper>
+        </List>
+      </InnerWrapper>
+    </FormWrapper>
+  );
 }

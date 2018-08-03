@@ -41,21 +41,21 @@ const Button = styled.button`
   }
 `;
 
-export const FilterButtons = () => {
-  const buttons = [
-    <Button>Service</Button>,
-    <Button>Installation</Button>,
-    <Button>Residential</Button>,
-    <Button className={"check-box-btn-last"}>Commercial</Button>,
+export const FilterButtons = props => {
+  const buttonsArr = [
+    [<Button>Service</Button>, "service"],
+    [<Button>Installation</Button>, "installation"],
+    [<Button>Residential</Button>, "residential"],
+    [<Button className={"check-box-btn-last"}>Commercial</Button>, "commercial"],
   ];
 
   return (
     <List>
-      {buttons.map((button, idx) => {
+      {buttonsArr.map((button, idx) => {
         return (
           <ListElement key={idx.toString()} className="link">
-            <CheckBox />
-            {button}
+            <CheckBox handleInputChange={props.handleInputChange} boxName={button[button.length - 1]}/>
+            {button[1]}
           </ListElement>
         );
       })}

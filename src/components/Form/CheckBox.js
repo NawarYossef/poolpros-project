@@ -3,10 +3,14 @@ import React from 'react';
 import '../../styles/main.css';
 
 
-export const CheckBox = () => {
+export const CheckBox = props => {
 	return (
 		<label className={"container"}>
-  		<input type="checkbox" name="radio" />
+      <input 
+      type="checkbox" 
+      name={props.boxName} 
+      onChange={props.handleInputChange}
+      />
 			<span className={"checkmark"}></span>
 		</label>
 	);
