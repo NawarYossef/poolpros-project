@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import 'normalize.css';
-import styled from 'styled-components';
-import { FindPoolButton } from './FindPoolButton';
-import '../../styles/main.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "normalize.css";
+import styled from "styled-components";
+import { FindPoolButton } from "./FindPoolButton";
+import "../../styles/main.css";
 
 const NavBar = styled.nav`
   flex: auto;
@@ -30,12 +30,13 @@ const NavLink = styled(Link)`
   color: #ffffff;
   font-size: 1.3em !important;
   display: block;
-  margin-right: ${props => props.lastbtn ? '0px' : '60px'};
+  margin-right: ${props => (props.lastbtn ? "0px" : "60px")};
   &:hover {
     color: #d9d9d9;
     text-decoration: none;
   }
-  &:visited, &:active {
+  &:visited,
+  &:active {
     color: #d9d9d9;
     text-decoration: none;
   }
@@ -69,7 +70,4 @@ export const MainNavbar = () => {
       </List>
     </NavBar>
   );
-}
-
-
-
+};

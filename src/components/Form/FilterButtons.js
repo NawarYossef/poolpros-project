@@ -1,9 +1,9 @@
-import 'normalize.css';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckBox } from './CheckBox';
-import styled from 'styled-components';
-import '../../styles/main.css';
+import "normalize.css";
+import React from "react";
+import { Link } from "react-router-dom";
+import { CheckBox } from "./CheckBox";
+import styled from "styled-components";
+import "../../styles/main.css";
 
 const List = styled.ul`
   height: 100%;
@@ -27,7 +27,7 @@ const Button = styled.button`
   font-size: 1.3em !important;
   padding: 0px;
   padding-right: 38px;
-  margin-right: ${props => props.lastbtn ? '0px' : '60px'};
+  margin-right: ${props => (props.lastbtn ? "0px" : "60px")};
   &:hover {
     color: #d9d9d9;
     text-decoration: none;
@@ -46,7 +46,7 @@ export const FilterButtons = props => {
     [<Button>Service</Button>, "service"],
     [<Button>Installation</Button>, "installation"],
     [<Button>Residential</Button>, "residential"],
-    [<Button className={"check-box-btn-last"}>Commercial</Button>, "commercial"],
+    [<Button className={"check-box-btn-last"}>Commercial</Button>, "commercial"]
   ];
 
   return (
@@ -54,11 +54,14 @@ export const FilterButtons = props => {
       {buttonsArr.map((button, idx) => {
         return (
           <ListElement key={idx.toString()} className="link">
-            <CheckBox handleInputChange={props.handleInputChange} boxName={button[button.length - 1]}/>
+            <CheckBox
+              handleInputChange={props.handleInputChange}
+              boxName={button[button.length - 1]}
+            />
             {button[1]}
           </ListElement>
         );
       })}
     </List>
   );
-}
+};

@@ -26,11 +26,7 @@
           "sat": "7:00am - 3:00pm",
           "sun": ""
         },
-        "certifications": [
-          "Installation Pro",
-          "Residential Pro",
-          "Service Pro"
-        ]
+        "certifications": ["Installation Pro", "Residential Pro", "Service Pro"]
       }
     },
     {
@@ -140,10 +136,7 @@
           "sat": "7:00am - 3:00pm",
           "sun": ""
         },
-        "certifications": [
-          "Installation Pro",
-          "Residential Pro"
-        ]
+        "certifications": ["Installation Pro", "Residential Pro"]
       }
     },
     {
@@ -196,11 +189,7 @@
           "sat": "7:00am - 7:00pm",
           "sun": "7:00am - 7:00pm"
         },
-        "certifications": [
-          "Installation Pro",
-          "Commercial Pro",
-          "Service Pro"
-        ]
+        "certifications": ["Installation Pro", "Commercial Pro", "Service Pro"]
       }
     }
   ]

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import 'normalize.css';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router-dom";
+import "normalize.css";
+import styled from "styled-components";
 // import '../styles/main.css';
 
 const NavBar = styled.nav`
@@ -12,7 +12,7 @@ const NavBar = styled.nav`
 `;
 
 const List = styled.ul`
-flex: 1;
+  flex: 1;
   height: 100%;
   display: flex;
   justify-content: flex-end;
@@ -31,12 +31,13 @@ const ListElement = styled.li`
 const NavLink = styled(Link)`
   color: #ffffff;
   font-size: 1.3em !important;
-  margin-right: ${props => props.lastbtn ? '0px' : '60px'};
+  margin-right: ${props => (props.lastbtn ? "0px" : "60px")};
   &:hover {
     color: #d9d9d9;
     text-decoration: none;
   }
-  &:visited, &:active {
+  &:visited,
+  &:active {
     color: #d9d9d9;
     text-decoration: none;
   }
@@ -51,7 +52,9 @@ const NavLink = styled(Link)`
 export const TopNavbar = () => {
   const links = [
     <NavLink to="/community">Dealers and Distributors</NavLink>,
-    <NavLink className={"second-link-top-menu"} to="/community">Commercial</NavLink>,
+    <NavLink className={"second-link-top-menu"} to="/community">
+      Commercial
+    </NavLink>
   ];
 
   return (
@@ -59,13 +62,12 @@ export const TopNavbar = () => {
       <List>
         {links.map((link, idx) => {
           return (
-            <ListElement key={idx.toString()} className="link">{link}</ListElement>
+            <ListElement key={idx.toString()} className="link">
+              {link}
+            </ListElement>
           );
         })}
       </List>
     </NavBar>
   );
-}
-
-
-
+};

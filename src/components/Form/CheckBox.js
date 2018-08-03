@@ -1,17 +1,16 @@
-import 'normalize.css';
-import React from 'react';
-import '../../styles/main.css';
-
+import "normalize.css";
+import React from "react";
+import "../../styles/main.css";
 
 export const CheckBox = props => {
-	return (
-		<label className={"container"}>
-      <input 
-      type="checkbox" 
-      name={props.boxName} 
-      onChange={props.handleInputChange}
+  return (
+    <label className={"container"}>
+      <input
+        type="checkbox"
+        name={props.boxName}
+        onChange={props.handleInputChange}
       />
-			<span className={"checkmark"}></span>
-		</label>
-	);
-}
+      <span className={"checkmark"} />
+    </label>
+  );
+};
