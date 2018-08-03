@@ -127,7 +127,7 @@ export default class ModalForm extends Component {
             </PhoneNumberInputWrapper>
             <PhoneNumberInput
               className={"phone-number-input"}
-              type="text"
+              type="number"
               name="number"
               placeholder={"8881234"}
               onChange={e =>

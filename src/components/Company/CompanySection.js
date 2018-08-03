@@ -12,7 +12,8 @@ import "../../styles/main.css";
 const Container = styled.div`
   margin: 5px;
   position: relative;
-  width: 32.2%;
+  flex-direction: row-reverse;
+  flex: 0 0 32.2%;
   border: #d4d4d4;
   border-radius: 5px;
   -webkit-box-shadow: 0px 2px 5px 2px #e3e3e3;

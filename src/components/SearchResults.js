@@ -16,9 +16,9 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
   flex-direction: row;
+  padding-left: 10px;
 `;
 
 export const SearchResults = props => {
