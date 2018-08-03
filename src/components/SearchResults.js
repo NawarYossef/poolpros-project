@@ -25,7 +25,7 @@ export const SearchResults = props => {
   return (
     <Results>
       <Wrapper>
-        {props.data.map(company => (
+        {props.data && props.data.map(company => (
           <CompanySection
             company={company.data}
             handleModalButtonAndStoreCompanyId={

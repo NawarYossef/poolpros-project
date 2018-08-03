@@ -81,6 +81,7 @@ export default class ModalForm extends Component {
       phoneNumber: "",
       email: "",
       comments: "",
+      hasPool: "yes",
       userIsTyping: false,
       formSubmitValid: false
     };
@@ -88,13 +89,51 @@ export default class ModalForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-   
+    const {
+      firstAndLastName,
+      phoneNumber,
+      email,
+      comments,
+      hasPool
+    } = this.state;
+    const userData = {
+      firstAndLastName,
+      phoneNumber,
+      email,
+      comments,
+      hasPool
+    };
+    //  this is a mock API call to a server to submit data via POST request
+    // assume there is a login system and user has a JWT stored in session
+    fetch("someurl/server", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`
+      },
+      body: JSON.stringify(userData)
+    })
+      .then(res => {
+        return;
+      })
+      .catch(err => console.log(err));
   };
 
-  handleCheckBoxToggle = e => {
-    if (e.target.value === "yes") {
+  checkBoxHandle = e => {
+    if (e.target.value === "no") {
+      this.toggleCheckBox(e.target.value);
+       this.setState({hasPool: "no"})
+    } else {
+      this.toggleCheckBox(e.target.value);
+      this.setState({hasPool: "yes"})
+    }
+  }
+
+  toggleCheckBox = val => {
+    if (val === "yes") {
       document.getElementById("check_2").checked = false;
-    } else if (e.target.value === "no") {
+    } else if (val === "no") {
       document.getElementById("check_1").checked = false;
     }
   };
@@ -181,7 +220,7 @@ export default class ModalForm extends Component {
             <FieldTitle>Do you currently own a pool or a spa?</FieldTitle>
             <span>Optional</span>
           </FieldWrapper>
-          <PoolQuestion handleCheckBoxToggle={this.handleCheckBoxToggle} />
+          <PoolQuestion checkBoxHandle={this.checkBoxHandle} />
           <Line />
           <SendEmailButton />
         </Form>

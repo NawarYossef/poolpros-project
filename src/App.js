@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Router, Route } from "react-router-dom";
 import { Layout } from "./Layout";
 import history from "./history";
+import axios from 'axios';
 import styled from "styled-components";
 import "normalize.css";
 import "./App.css";
@@ -22,11 +23,26 @@ const Page = styled(Router)`
 `;
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: {}
+    };
+  }
+  componentDidMount = () => {
+    // data from the Dealer.json file is hosted on api.json.com
+    const url = "https://api.myjson.com/bins/sgv34"
+    axios.get(url)
+      .then(res => {
+        this.setState({data: res.data})
+      })
+      .catch(err => console.log(err));
+  };
   render() {
     return (
       <Page history={history}>
         <PageWrapper>
-          <Layout>
+          <Layout DealersData={this.state.data}>
             <Route exact path="/" />
           </Layout>
         </PageWrapper>

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { FilteringForm } from "./FilteringForm";
 import { SearchResults } from "../components/SearchResults";
 import { Modal } from "../components/Modal/Modal";
-import DealersData from "../dealers-data";
 import "normalize.css";
 import styled from "styled-components";
 import WaterImage from "../assets/water-image.png";
@@ -51,6 +50,7 @@ export default class Main extends Component {
         });
   };
   render() {
+    const {DealersData} = this.props
     let companiesData = [];
     if (this.state.checkBoxValues.length) {
       companiesData = DealersData.dealers.filter(dealer => {

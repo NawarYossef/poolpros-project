@@ -4,12 +4,12 @@ import { TopHeader } from "./components/Header/TopHeader";
 import Main from "./containers/Main";
 import { Footer } from "./components/Footer/Footer";
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, DealersData }) => {
   return (
     <React.Fragment>
       <TopHeader />
       <MainHeader />
-      <Main />
+      <Main DealersData={DealersData}/>
       {children}
       <Footer />
     </React.Fragment>
