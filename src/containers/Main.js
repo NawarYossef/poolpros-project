@@ -39,17 +39,37 @@ export default class Main extends Component {
     e.preventDefault();
   };
 
-  handleInputChange = () => {};
+  handleInputChange = e => {
+    e.target.checked
+      ? this.setState({
+          checkBoxValues: [...this.state.checkBoxValues, e.target.name]
+        })
+      : this.setState({
+          checkBoxValues: this.state.checkBoxValues.filter(
+            val => val !== e.target.name
+          )
+        });
+  };
   render() {
+    let companiesData = [];
+    if (this.state.checkBoxValues.length) {
+      companiesData = DealersData.dealers.filter(dealer => {
+        return dealer.data.certifications.length ===
+          dealer.data.certifications
+            .concat(this.state.checkBoxValues)
+            .filter((val, idx, arr) => arr.indexOf(val) === idx).length;
+      }); 
+    } else {
+      companiesData = DealersData.dealers;
+    }
+
     return (
       <MainSection>
         <img src={WaterImage} className={"main-section-image"} alt="" />
-        <FilteringForm
-          checkBoxValues={this.props.checkBoxValues}
-          handleInputChange={this.props.handleInputChange}
-        />
+        <FilteringForm handleInputChange={this.handleInputChange} />
         <SearchResults
-          Data={DealersData}
+          data={companiesData}
+          checkBoxValues={this.state.checkBoxValues}
           handleModalButtonAndStoreCompanyId={
             this.handleModalButtonAndStoreCompanyId
           }

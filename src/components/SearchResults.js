@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
 `;
@@ -25,9 +25,9 @@ export const SearchResults = props => {
   return (
     <Results>
       <Wrapper>
-        {props.Data.dealers.map(dealer => (
+        {props.data.map(company => (
           <CompanySection
-            company={dealer.data}
+            company={company.data}
             handleModalButtonAndStoreCompanyId={
               props.handleModalButtonAndStoreCompanyId
             }

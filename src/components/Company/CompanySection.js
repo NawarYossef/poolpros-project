@@ -10,6 +10,7 @@ import styled from "styled-components";
 import "../../styles/main.css";
 
 const Container = styled.div`
+  margin: 5px;
   position: relative;
   width: 32.2%;
   border: #d4d4d4;

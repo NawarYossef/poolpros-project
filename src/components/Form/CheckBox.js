@@ -8,7 +8,7 @@ export const CheckBox = props => {
       <input
         type="checkbox"
         name={props.boxName}
-        onChange={props.handleInputChange}
+        onChange={e => props.handleInputChange(e)}
       />
       <span className={"checkmark"} />
     </label>

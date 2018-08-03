@@ -1,6 +1,5 @@
 import "normalize.css";
 import React from "react";
-import { Link } from "react-router-dom";
 import { CheckBox } from "./CheckBox";
 import styled from "styled-components";
 import "../../styles/main.css";
@@ -43,10 +42,10 @@ const Button = styled.button`
 
 export const FilterButtons = props => {
   const buttonsArr = [
-    [<Button>Service</Button>, "service"],
-    [<Button>Installation</Button>, "installation"],
-    [<Button>Residential</Button>, "residential"],
-    [<Button className={"check-box-btn-last"}>Commercial</Button>, "commercial"]
+    [<Button>Service</Button>, "Service Pro"],
+    [<Button>Installation</Button>, "Installation Pro"],
+    [<Button>Residential</Button>, "Residential Pro"],
+    [<Button className={"check-box-btn-last"}>Commercial</Button>, "Commercial Pro"]
   ];
 
   return (
