@@ -1,5 +1,4 @@
 import React from "react";
-import "normalize.css";
 import styled from "styled-components";
 import { MainNavbar } from "./MainNavbar";
 import { Logo } from "./Logo";
@@ -19,18 +18,7 @@ const HeaderWrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  @media (min-width: 320px) {
-    flex-direction: column;
-  }
-  @media (min-width: 375px) {
-    flex-direction: column;
-  }
-  @media (min-width: 425px) {
-    flex-direction: column;
-  }
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
+  justify-content: space-between;
 `;
 
 export const MainHeader = () => {

@@ -1,20 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "normalize.css";
 import styled from "styled-components";
 import { FindPoolButton } from "./FindPoolButton";
 import "../../styles/main.css";
 
 const NavBar = styled.nav`
-  flex: auto;
+  flex: 0 0 80%;
+  @media (min-width: 1025px) {
+    flex: 0 0 70%;
+  }
 `;
 
 const List = styled.ul`
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  list-style-type: none;
+  justify-content: flex-end;
   margin-bottom: 0px;
   @media (min-width: 320px) {
     padding-left: 0px;
@@ -22,13 +23,13 @@ const List = styled.ul`
 `;
 
 const ListElement = styled.li`
-  margin-bottom: 0px;
+  display: inline-block;
   text-decoration: none;
 `;
 
 const NavLink = styled(Link)`
   color: #ffffff;
-  font-size: 1.3em !important;
+  font-size: 1em;
   display: block;
   margin-right: ${props => (props.lastbtn ? "0px" : "60px")};
   &:hover {
@@ -66,7 +67,9 @@ export const MainNavbar = () => {
             </ListElement>
           );
         })}
-        <FindPoolButton />
+        <ListElement key={"location-btn"} className="link">
+          <FindPoolButton />
+        </ListElement>
       </List>
     </NavBar>
   );

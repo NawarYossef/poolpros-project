@@ -5,20 +5,23 @@ import "normalize.css";
 import styled from "styled-components";
 import "../../styles/main.css";
 
-const WrapperForAppTitle = styled(Link)`
-  flex: auto;
+const WrapperForImg = styled(Link)`
+  flex: 0 0 20%;
   display: flex;
   align-items: center;
   text-align: initial;
   &:hover {
     text-decoration: none;
   }
+  @media (min-width: 1025px) {
+    flex: 0 0 30%;
+  }
 `;
 
 export const Logo = () => {
   return (
-    <WrapperForAppTitle to={"/"}>
+    <WrapperForImg to={"/"}>
       <img src={PoolProsLogo} className={"app-logo"} alt="" />
-    </WrapperForAppTitle>
+    </WrapperForImg>
   );
 };

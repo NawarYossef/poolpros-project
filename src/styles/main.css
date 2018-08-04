@@ -15,7 +15,7 @@ html, body {
 }
 
 body {
-  position: relative !important;
+  position: relative;
 }
 
 /* ===========*/
@@ -25,7 +25,8 @@ body {
 /* ===========*/
 
 .app-logo {
-  width: 40%;
+  width: 70%;
+  height: 100%;
 }
 
 /* ===========*/
@@ -58,6 +59,18 @@ a {
 
 .second-link-top-menu, .filter-list-wrapper button {
   margin-right: 0px !important;
+}
+
+.action-icon {
+  width: 13px;
+  height: 11px;
+  margin: 0px 0px 0px 10px;
+}
+
+.second-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ===========*/
@@ -143,7 +156,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 /* ===========*/
 
 /* Author: w3School */
-
 .container {
   display: block;
   position: relative;
@@ -195,6 +207,8 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   height: 8px;
   background: white;
 }
+/* ================================== */
+
 
 .check-box-btn-last {
   padding-right: 0px !important;

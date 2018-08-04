@@ -1,11 +1,10 @@
-import "normalize.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import LocationIcon from "../../assets/location-icon.png";
 import styled from "styled-components";
 import "../../styles/main.css";
 
-const LocationButtonWrapper = styled.div`
+const LocationButtonWrapper = styled.li`
   display: flex;
   position: relative;
   align-items: center;
@@ -13,9 +12,12 @@ const LocationButtonWrapper = styled.div`
   color: #083d8c !important;
   background-color: transparent;
   margin-left: auto;
-  padding: 10px 20px;
+  padding: 6px 6px;
   border-radius: 3px;
   box-sizing: border-box;
+  @media (min-width: 1025px) {
+    padding: 10px 20px;
+  }
 `;
 export const FindPoolButton = () => {
   return (
