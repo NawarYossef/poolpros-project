@@ -11,6 +11,9 @@ const AppHeader = styled.nav`
   top: 0;
   background-color: #083d8c;
   padding: 15px 0px;
+  @media (max-width: 980px) {
+    display: none;
+  }
 `;
 
 const HeaderWrapper = styled.div`
@@ -19,17 +22,8 @@ const HeaderWrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: flex-end;
-  @media (min-width: 320px) {
-    flex-direction: column;
-  }
-  @media (min-width: 375px) {
-    flex-direction: column;
-  }
-  @media (min-width: 425px) {
-    flex-direction: column;
-  }
-  @media (min-width: 768px) {
-    flex-direction: row;
+  @media (max-width: 1024px) {
+    max-width: 95%;
   }
 `;
 

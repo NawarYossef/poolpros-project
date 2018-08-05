@@ -4,14 +4,24 @@
 
 /* ===========*/
 
-#root {
-  width: 100%;
-  height: 100%;
-}
-
 html, body {
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-size: 1em;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  padding-left: -40px;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -91,12 +101,6 @@ a {
 
 /* ===========*/
 
-.filter-list-wrapper button {
-  background: transparent;
-  border: none;
-  color: #4b4b4b;
-}
-
 .filter-list-wrapper button:hover {
   color: #4b4b4b;
 }
@@ -155,8 +159,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 /* ===========*/
 
-/* Author: w3School */
-.container {
+.label-for-checkbox {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -170,7 +173,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   user-select: none;
 }
 
-.container input {
+.label-for-checkbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -186,7 +189,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   background-color: #eee;
 }
 
-.container input:checked~.checkmark {
+.label-for-checkbox input:checked~.checkmark {
   background-color: #2196F3;
 }
 
@@ -196,19 +199,19 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   display: none;
 }
 
-.container input:checked~.checkmark:after {
+.label-for-checkbox input:checked~.checkmark:after {
   display: block;
 }
 
-.container .checkmark:after {
+.label-for-checkbox .checkmark:after {
   top: 8px;
   left: 7.7px;
   width: 8px;
   height: 8px;
   background: white;
 }
-/* ================================== */
 
+/* ================================== */
 
 .check-box-btn-last {
   padding-right: 0px !important;
@@ -221,7 +224,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .border-img {
-  margin-right: 31px;
+  margin-right: 15px;
 }
 
 .phone-icon-desktop {
@@ -304,4 +307,27 @@ label {
 i {
   margin-left: 8px;
   color: #01c7c6;
+}
+
+/* ===========*/
+
+/* media query */
+
+/* ===========*/
+@media screen and (max-width: 1024px) {
+  .border-img {
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .tool-tip-img {
+    display: none;
+  }
+  .border-img {
+    display: none;
+  }
+  .filter-list-wrapper {
+    padding: 0;
+  }
 }

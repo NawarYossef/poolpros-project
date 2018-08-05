@@ -19,6 +19,9 @@ const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 1024px) {
+    max-width: 95%;
+  }
 `;
 
 export const MainHeader = () => {

@@ -49,6 +49,12 @@ export default class Main extends Component {
           )
         });
   };
+
+  handleDropDownMenu = () => {
+    console.log('------------------------------------');
+    console.log("fddfdf");
+    console.log('------------------------------------');
+  }
   render() {
     const { DealersData } = this.props;
     let companiesData = [];
@@ -68,7 +74,11 @@ export default class Main extends Component {
     return (
       <MainSection>
         <img src={WaterImage} className={"main-section-image"} alt="" />
-        <FilteringForm handleInputChange={this.handleInputChange} />
+        <FilteringForm
+          handleInputChange={this.handleInputChange}
+          handleDropDownMenu={this.handleDropDownMenu}
+          resultCount={companiesData ? companiesData.length : 0}
+        />
         <SearchResults
           data={companiesData}
           checkBoxValues={this.state.checkBoxValues}

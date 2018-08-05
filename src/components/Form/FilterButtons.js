@@ -6,12 +6,21 @@ import "../../styles/main.css";
 
 const List = styled.ul`
   height: 100%;
+  width: 80%;
   display: flex;
   flex: 1;
   padding-left: 0px;
   justify-content: flex-end;
-  list-style-type: none;
   margin-bottom: 0px;
+  @media (max-width: 980px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: left;
+    border: 1px solid #d8d8d8;
+    box-sizing: border-box;
+    width: 86%;
+  }
 `;
 
 const ListElement = styled.li`
@@ -19,24 +28,20 @@ const ListElement = styled.li`
   text-decoration: none;
   display: flex;
   align-items: center;
+  @media (max-width: 980px) {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
 `;
 
 const Button = styled.button`
   color: #ffffff;
-  font-size: 1.3em !important;
   padding: 0px;
   padding-right: 38px;
   margin-right: ${props => (props.lastbtn ? "0px" : "60px")};
   &:hover {
     color: #d9d9d9;
     text-decoration: none;
-  }
-
-  @media (min-width: 320px) {
-    font-size: 1em !important;
-  }
-  @media (min-width: 425px) {
-    font-size: 1em !important;
   }
 `;
 
@@ -45,7 +50,10 @@ export const FilterButtons = props => {
     [<Button>Service</Button>, "Service Pro"],
     [<Button>Installation</Button>, "Installation Pro"],
     [<Button>Residential</Button>, "Residential Pro"],
-    [<Button className={"check-box-btn-last"}>Commercial</Button>, "Commercial Pro"]
+    [
+      <Button className={"check-box-btn-last"}>Commercial</Button>,
+      "Commercial Pro"
+    ]
   ];
 
   return (

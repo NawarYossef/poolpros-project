@@ -24,17 +24,8 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   border-radius: 5px;
-  @media (min-width: 320px) {
-    flex-direction: column;
-  }
-  @media (min-width: 375px) {
-    flex-direction: column;
-  }
-  @media (min-width: 425px) {
-    flex-direction: column;
-  }
-  @media (min-width: 768px) {
-    flex-direction: row;
+  @media (max-width: 1024px) {
+    max-width: 95%;
   }
 `;
 
@@ -44,24 +35,58 @@ const List = styled.div`
   display: flex;
   align-items: center;
   padding: 31px 0px;
+  @media (max-width: 1024px) {
+    padding: 31px 10px;
+  }
+  @media (max-width: 980px) {
+    padding: 0px;
+  }
+  @media (min-width: 1025px) {
+    padding: 31px 10px;
+  }
+  @media (min-width: 1440px) {
+    padding: 31px;
+  }
 `;
 
 const InnerWrapper = styled.div`
-  width: 80%;
+  width: 85.5%;
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  @media (max-width: 980px) {
+    flex-direction: column;
+  }
+  @media (max-width: 1439px) {
+    width: 100%;
+  }
+  @media (max-width: 980px) {
+    padding: 17px;
+  }
 `;
 
+const Column = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  @media (max-width: 980px) {
+    width: 86%;
+  }
+  
+`;
 export const FilteringForm = props => {
   return (
     <Section>
       <Wrapper>
         <List className={"filter-list-wrapper"}>
           <InnerWrapper>
-            <ResultCount />
-            <img src={Rectangle} alt="" className={"border-img"} />
-            <FormTitle />
+            <Column>
+              <ResultCount count={props.resultCount} />
+              <img src={Rectangle} alt="" className={"border-img"} />
+              <FormTitle handleDropDownMenu={props.handleDropDownMenu}/>
+            </Column>
             <FilterButtons handleInputChange={props.handleInputChange} />
             <TooTip />
           </InnerWrapper>
