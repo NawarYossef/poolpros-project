@@ -103,9 +103,17 @@ export const FilteringForm = props => {
               <FormTitle handleDropDownMenu={props.handleDropDownMenu} />
             </FirstContainer>
             <SecondContainer>
-              {<FilterButtons handleInputChange={props.handleInputChange} />}
+              {
+                <FilterButtons
+                  handleInputChange={props.handleInputChange}
+                  checkBoxValues={props.checkBoxValues}
+                />
+              }
               {props.dropDownBtnClicked && (
-                <DropDownButtons handleInputChange={props.handleInputChange} />
+                <DropDownButtons
+                  handleInputChange={props.handleInputChange}
+                  checkBoxValues={props.checkBoxValues}
+                />
               )}
               <TooTip />
             </SecondContainer>

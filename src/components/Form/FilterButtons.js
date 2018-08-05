@@ -53,6 +53,7 @@ export const FilterButtons = props => {
             <CheckBox
               handleInputChange={props.handleInputChange}
               boxName={button[button.length - 1]}
+              checked={props.checkBoxValues.includes(button[1]) ? true : false}
             />
             {button[1]}
           </ListElement>

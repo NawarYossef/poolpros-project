@@ -53,6 +53,7 @@ export const DropDownButtons = props => {
         return (
           <ListElement key={idx.toString()} className="link">
             <CheckBox
+              checked={props.checkBoxValues.includes(button[1]) ? true : false}
               handleInputChange={props.handleInputChange}
               boxName={button[button.length - 1]}
             />
