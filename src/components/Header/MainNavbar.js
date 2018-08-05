@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FindPoolButton } from "./FindPoolButton";
 import { HamburgerBtn } from "./HamburgerBtn";
+import { MobileNavMenu } from "./MobileNavMenu";
 import "../../styles/main.css";
 
 const NavBar = styled.nav`
@@ -86,8 +87,9 @@ export const MainNavbar = props => {
         <ListElement key={"location-btn"} className="link">
           <FindPoolButton />
         </ListElement>
-        <HamburgerBtn hamburgerBtnHandle={props.hamburgerBtnHandle} />
-      </List>
+        <HamburgerBtn menuBtnHandle={props.menuBtnHandle} />
+        </List>
+        {props.btnClicked ? <MobileNavMenu onClick={props.menuBtnHandle}/> : null }
     </NavBar>
   );
 };

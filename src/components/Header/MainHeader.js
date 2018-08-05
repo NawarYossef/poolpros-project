@@ -33,7 +33,8 @@ export const MainHeader = props => {
     <AppHeader>
       <HeaderWrapper>
         <Logo />
-       <MainNavbar hamburgerBtnHandle={props.hamburgerBtnHandle}/>
+       <MainNavbar menuBtnHandle={props.menuBtnHandle}
+       btnClicked={props.btnClicked}/>
       </HeaderWrapper>
     </AppHeader>
   );

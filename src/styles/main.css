@@ -34,6 +34,12 @@ body {
 
 /* ===========*/
 
+.fa-times {
+  float: right;
+  padding: 10px;
+  font-size: 1.3em;
+  margin-left: 0px;
+}
 ul {
   margin-top: 0px;
 }
@@ -44,6 +50,9 @@ a {
 
 .main-nav-menu a {
   color: #083D8C !important;
+}
+.mobile-nav-menu a {
+  color: #616161 !important;
 }
 
 .find-pool-btn {

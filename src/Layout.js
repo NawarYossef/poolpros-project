@@ -8,11 +8,11 @@ export class Layout extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hamburgerBtnClicked: false
+      menuBtnClicked: false
     }
   }
-  hamburgerBtnHandle = () => {
-    this.setState({hamburgerBtnClicked: !this.state.hamburgerBtnClicked})
+  menuBtnHandle = () => {
+    this.setState({menuBtnClicked: !this.state.menuBtnClicked})
   }
 
   render() {
@@ -20,7 +20,7 @@ export class Layout extends Component {
     return (
       <React.Fragment>
         <TopHeader />
-        <MainHeader hamburgerBtnHandle={this.hamburgerBtnHandle}/>
+        <MainHeader menuBtnHandle={this.menuBtnHandle} btnClicked={this.state.menuBtnClicked}/>
         <Main DealersData={DealersData} />
         {children}
         <Footer />

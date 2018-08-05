@@ -20,7 +20,7 @@ export const HamburgerBtn = props => {
       src={MenuIcon}
       className={"hamburger-btn"}
       alt=""
-      onClick={() => props.hamburgerBtnHandle()}
+      onClick={() => props.menuBtnHandle()}
     />
   );
 };

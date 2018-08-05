@@ -15,6 +15,9 @@ const Section = styled.section`
   padding: 0px 0px;
   position: relative;
   top: 7.5%;
+  @media (max-width: 980px) {
+    background: #f6f6f6;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -63,6 +66,11 @@ const InnerWrapper = styled.div`
   @media (max-width: 980px) {
     flex-direction: column;
     padding: 17px;
+  }
+  @media (max-width: 425px) {
+    flex-direction: column;
+    padding: 17px 0px;
+    width: 100%;
   }
   @media (min-width: 981px) {
     width: 100%;
