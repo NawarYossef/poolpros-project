@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from 'react-dom'
 import { FilteringForm } from "./FilteringForm";
 import { SearchResults } from "../components/SearchResults";
 import { Modal } from "../components/Modal/Modal";
@@ -21,11 +22,21 @@ export default class Main extends Component {
       resultCount: 0,
       checked: false,
       btnClicked: false,
+      dropDownBtnClicked: false,
       companyId: 0,
       formSubmitValid: false,
-      checkBoxValues: []
+      checkBoxValues: [],
+      screenWidth: 0
     };
   }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  updateDimensions = () => {
+    this.setState({screenWidth: window.innerWidth});
+}
 
   handleModalButtonAndStoreCompanyId = companyId => {
     this.setState({
@@ -51,10 +62,11 @@ export default class Main extends Component {
   };
 
   handleDropDownMenu = () => {
-    console.log('------------------------------------');
-    console.log("fddfdf");
-    console.log('------------------------------------');
-  }
+    this.setState({
+      dropDownBtnClicked: !this.state.dropDownBtnClicked
+    });
+  };
+
   render() {
     const { DealersData } = this.props;
     let companiesData = [];
@@ -77,7 +89,9 @@ export default class Main extends Component {
         <FilteringForm
           handleInputChange={this.handleInputChange}
           handleDropDownMenu={this.handleDropDownMenu}
+          dropDownBtnClicked={this.state.dropDownBtnClicked}
           resultCount={companiesData ? companiesData.length : 0}
+          screenWidth={this.state.screenWidth}
         />
         <SearchResults
           data={companiesData}

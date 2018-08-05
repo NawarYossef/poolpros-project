@@ -5,7 +5,6 @@ import "../../styles/main.css";
 const Count = styled.h4`
   margin: 0px;
   padding: 0px;
-  padding-right: 29px;
   color: #216ddf;
   display: inline-block;
   @media (max-width: 980px) {

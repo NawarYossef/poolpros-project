@@ -5,13 +5,19 @@ import styled from "styled-components";
 import "../../styles/main.css";
 
 const List = styled.ul`
-  height: 100%;
-  max-width: 100%;
-  display: flex;
-  padding-left: 0px;
-  justify-content: flex-start;
+  flex: 1;
   margin-bottom: 0px;
-  @media (max-width: 980px) {
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  border: 1px solid #d8d8d8;
+  margin-top: -1px;
+  box-sizing: border-box;
+  width: 86%;
+  height: 100%;
+  @media (min-width: 981px) {
     display: none;
   }
 `;
@@ -21,20 +27,16 @@ const ListElement = styled.li`
   text-decoration: none;
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
 `;
 
 const Button = styled.button`
-  color: #ffffff;
   padding: 0px;
   padding-right: 38px;
-  margin-right: 0px;
-  &:hover {
-    color: #d9d9d9;
-    text-decoration: none;
-  }
 `;
 
-export const FilterButtons = props => {
+export const DropDownButtons = props => {
   const buttonsArr = [
     [<Button>Service</Button>, "Service Pro"],
     [<Button>Installation</Button>, "Installation Pro"],

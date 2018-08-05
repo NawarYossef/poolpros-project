@@ -16,7 +16,7 @@ body {
 ul, li {
   margin: 0;
   padding: 0;
-  padding-left: -40px;
+  -webkit-padding-start: 0px;
 }
 
 #root {
@@ -221,10 +221,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   height: 19px;
   width: 19px;
   margin-left: 8px;
-}
-
-.border-img {
-  margin-right: 15px;
 }
 
 .phone-icon-desktop {

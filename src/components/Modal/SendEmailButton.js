@@ -16,7 +16,7 @@ export const SendEmailButton = props => {
   return (
     <Button>
       Send my email
-      <i class="fas fa-angle-right" />
+      <i className="fas fa-angle-right" />
     </Button>
   );
 };

@@ -18,7 +18,6 @@ const ColumnTitle = styled.button`
   height: 100%;
   width: 80%;
   border: 1px solid #d8d8d8;
-  border-bottom: none;
   color: rgb(0, 0, 0);
   background: #ffffff;
   flex: 0 0 80%;
@@ -38,7 +37,6 @@ const Arrow = styled(FontAwesome)`
   flex: 0 0 20%;
   border: 1px solid #d8d8d8;
   border-left: none;
-  border-bottom: none;
   height: 100%;
   box-sizing: border-box;
   line-height: 2.5;
@@ -48,8 +46,14 @@ export const FormTitle = props => {
   return (
     <React.Fragment>
       <Wrapper>
-        <ColumnTitle onClick={() => props.handleDropDownMenu()}>Filter Results </ColumnTitle>
-        <Arrow name="caret-down" onClick={() => props.handleDropDownMenu()}/>
+        <ColumnTitle onClick={() => props.handleDropDownMenu()}>
+          Filter Results{" "}
+        </ColumnTitle>
+        <Arrow
+          name="caret-down"
+          onClick={() => props.handleDropDownMenu()}
+          className="drop-down-caret"
+        />
       </Wrapper>
       <Title>Filter Results </Title>
     </React.Fragment>
