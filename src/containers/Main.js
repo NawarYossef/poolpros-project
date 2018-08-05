@@ -20,7 +20,6 @@ export default class Main extends Component {
     super(props);
     this.state = {
       resultCount: 0,
-      checked: false,
       btnClicked: false,
       dropDownBtnClicked: false,
       companyId: 0,
@@ -41,7 +40,6 @@ export default class Main extends Component {
   };
 
   handleInputChange = e => {
-    // this.RetainCheckBoxState(e);
     e.target.checked
       ? this.setState({
           checkBoxValues: [...this.state.checkBoxValues, e.target.name]
@@ -52,12 +50,6 @@ export default class Main extends Component {
           )
         });
   };
-
-  // RetainCheckBoxState = e => {
-  //   if (this.state.checkBoxValues.includes(e.target.name)) {
-  //     document.
-  //   }
-  // };
 
   handleDropDownMenu = () => {
     this.setState({

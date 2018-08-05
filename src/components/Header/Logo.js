@@ -13,15 +13,29 @@ const WrapperForImg = styled(Link)`
   &:hover {
     text-decoration: none;
   }
+  @media (max-width: 980px) {
+    flex: 0 0 40%;
+  }
   @media (min-width: 1025px) {
     flex: 0 0 30%;
+  }
+`;
+
+const Image = styled.img`
+  width: 70%;
+  height: 100%;
+  @media (max-width: 600px) {
+    width: 95%;
+  }
+  @media (max-width: 980px) {
+    width: 90%;
   }
 `;
 
 export const Logo = () => {
   return (
     <WrapperForImg to={"/"}>
-      <img src={PoolProsLogo} className={"app-logo"} alt="" />
+      <Image src={PoolProsLogo} className={"app-logo"} alt="" />
     </WrapperForImg>
   );
 };

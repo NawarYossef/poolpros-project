@@ -10,6 +10,10 @@ const AppHeader = styled.nav`
   padding: 30px 0px;
   box-shadow: 0 0 10px -2px rgba(41, 38, 38, 0.7);
   -webkit-box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.7);
+  @media (max-width: 980px) {
+    padding: 0px;
+    height: 55px;
+  }
 `;
 
 const HeaderWrapper = styled.div`
@@ -24,12 +28,12 @@ const HeaderWrapper = styled.div`
   }
 `;
 
-export const MainHeader = () => {
+export const MainHeader = props => {
   return (
     <AppHeader>
       <HeaderWrapper>
         <Logo />
-        <MainNavbar />
+       <MainNavbar hamburgerBtnHandle={props.hamburgerBtnHandle}/>
       </HeaderWrapper>
     </AppHeader>
   );

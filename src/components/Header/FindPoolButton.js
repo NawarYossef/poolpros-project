@@ -15,6 +15,10 @@ const LocationButtonWrapper = styled.li`
   padding: 6px 6px;
   border-radius: 3px;
   box-sizing: border-box;
+  @media (max-width: 980px) {
+    padding: 8px;
+    font-size: 1em;
+  }
   @media (min-width: 1025px) {
     padding: 10px 20px;
   }

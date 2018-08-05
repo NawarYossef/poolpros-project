@@ -104,12 +104,12 @@ export default class ModalForm extends Component {
       hasPool
     };
     //  this is a mock API call to a server to submit data via POST request
-    // assume there is a login system and user has a JWT stored in session
     fetch("someurl/server", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
+        // assume there is a login system and user has a JWT stored in session
         Authorization: `Bearer ${localStorage.getItem("token")}`
       },
       body: JSON.stringify(userData)
@@ -123,12 +123,12 @@ export default class ModalForm extends Component {
   checkBoxHandle = e => {
     if (e.target.value === "no") {
       this.toggleCheckBox(e.target.value);
-       this.setState({hasPool: "no"})
+      this.setState({ hasPool: "no" });
     } else {
       this.toggleCheckBox(e.target.value);
-      this.setState({hasPool: "yes"})
+      this.setState({ hasPool: "yes" });
     }
-  }
+  };
 
   toggleCheckBox = val => {
     if (val === "yes") {

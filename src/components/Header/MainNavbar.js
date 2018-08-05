@@ -2,10 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FindPoolButton } from "./FindPoolButton";
+import { HamburgerBtn } from "./HamburgerBtn";
 import "../../styles/main.css";
 
 const NavBar = styled.nav`
   flex: 0 0 80%;
+  @media (max-width: 980px) {
+    flex: 0 0 60%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0px;
+  }
   @media (min-width: 1025px) {
     flex: 0 0 70%;
   }
@@ -25,6 +32,12 @@ const List = styled.ul`
 const ListElement = styled.li`
   display: inline-block;
   text-decoration: none;
+  @media (max-width: 980px) {
+    display: flex;
+    padding: 10px 0px;
+    align-items: center;
+    justify-content: flex-start;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -47,9 +60,12 @@ const NavLink = styled(Link)`
   @media (min-width: 425px) {
     font-size: 0.8em !important;
   }
+  @media (max-width: 980px) {
+    display: none;
+  }
 `;
 
-export const MainNavbar = () => {
+export const MainNavbar = props => {
   const links = [
     <NavLink to="/community">Pools & Spas</NavLink>,
     <NavLink to="/community">Supplies</NavLink>,
@@ -70,6 +86,7 @@ export const MainNavbar = () => {
         <ListElement key={"location-btn"} className="link">
           <FindPoolButton />
         </ListElement>
+        <HamburgerBtn hamburgerBtnHandle={props.hamburgerBtnHandle} />
       </List>
     </NavBar>
   );
