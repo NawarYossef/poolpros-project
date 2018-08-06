@@ -47,7 +47,11 @@ nav i {
   color: #01c7c6 !important;
 }
 
-main .fa-times {
+main i.fa-times {
+  float: right;
+  padding: 10px;
+  font-size: 1.3em;
+  margin-left: 0px;
   color: #ffffff !important;
 }
 
