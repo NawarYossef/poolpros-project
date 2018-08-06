@@ -12,7 +12,6 @@ const MainSection = styled.main`
   width: 100%;
   margin: 0 auto;
   align-items: center;
-  position: relative;
 `;
 
 export default class Main extends Component {

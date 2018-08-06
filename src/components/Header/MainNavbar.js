@@ -14,8 +14,11 @@ const NavBar = styled.nav`
     justify-content: flex-start;
     padding-left: 0px;
   }
-  @media (min-width: 1025px) {
+  @media (min-width: 1100px) {
     flex: 0 0 70%;
+  }
+  @media (min-width: 1440px) {
+    flex: 0 0 80%;
   }
 `;
 
@@ -44,6 +47,7 @@ const ListElement = styled.li`
 const NavLink = styled(Link)`
   color: #ffffff;
   font-size: 1em;
+  font-weight: 600;
   display: block;
   margin-right: ${props => (props.lastbtn ? "0px" : "60px")};
   &:hover {
@@ -54,12 +58,6 @@ const NavLink = styled(Link)`
   &:active {
     color: #d9d9d9;
     text-decoration: none;
-  }
-  @media (min-width: 320px) {
-    font-size: 1em !important;
-  }
-  @media (min-width: 425px) {
-    font-size: 0.8em !important;
   }
   @media (max-width: 980px) {
     display: none;
@@ -88,8 +86,10 @@ export const MainNavbar = props => {
           <FindPoolButton />
         </ListElement>
         <HamburgerBtn menuBtnHandle={props.menuBtnHandle} />
-        </List>
-        {props.btnClicked ? <MobileNavMenu onClick={props.menuBtnHandle}/> : null }
+      </List>
+      {props.btnClicked ? (
+        <MobileNavMenu onClick={props.menuBtnHandle} />
+      ) : null}
     </NavBar>
   );
 };

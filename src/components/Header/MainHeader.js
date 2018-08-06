@@ -17,15 +17,12 @@ const AppHeader = styled.nav`
 `;
 
 const HeaderWrapper = styled.div`
-  max-width: 88.5%;
+  max-width: 95%;
   margin: 0 auto;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media (max-width: 1024px) {
-    max-width: 95%;
-  }
 `;
 
 export const MainHeader = props => {

@@ -16,8 +16,11 @@ const WrapperForImg = styled(Link)`
   @media (max-width: 980px) {
     flex: 0 0 40%;
   }
-  @media (min-width: 1025px) {
+  @media (min-width: 1100px) {
     flex: 0 0 30%;
+  }
+  @media (min-width: 1440px) {
+    flex: 0 0 20%;
   }
 `;
 

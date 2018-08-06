@@ -26,6 +26,7 @@ const ColumnTitle = styled.button`
 const Title = styled.button`
   margin: 0px;
   padding: 0px;
+  font-weight: bold;
   color: rgb(0, 0, 0);
   background: transparent;
   border: none;
@@ -47,7 +48,7 @@ export const FormTitle = props => {
     <React.Fragment>
       <Wrapper>
         <ColumnTitle onClick={() => props.handleDropDownMenu()}>
-          Filter Results{" "}
+          Filter Results
         </ColumnTitle>
         <Arrow
           name="caret-down"

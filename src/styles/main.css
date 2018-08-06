@@ -11,6 +11,7 @@ html, body {
 
 body {
   font-size: 1em;
+
 }
 
 ul, li {
@@ -57,6 +58,7 @@ a {
 }
 
 .find-pool-btn {
+  font-weight: bold;
   color: #083D8C !important;
   background-color: transparent;
   margin-left: auto;
@@ -71,8 +73,7 @@ a {
 }
 
 .action-icon {
-  width: 13px;
-  height: 11px;
+  width: 14px;
   margin: 0px 0px 0px 10px;
 }
 

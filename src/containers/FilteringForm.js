@@ -76,6 +76,9 @@ const InnerWrapper = styled.div`
     width: 100%;
   }
   @media (min-width: 1100px) {
+    width: 100%;
+  }
+  @media (min-width: 1300px) {
     width: 87.5%;
   }
 `;
