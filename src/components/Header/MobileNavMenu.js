@@ -13,8 +13,8 @@ top: 0;
 left: 0;
 rightL 0;
 z-index: 1;
-box-shadow: 0 0 10px -2px rgba(41, 38, 38, 0.7);
--webkit-box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.7);
+box-shadow:  0 10px 10px rgba(41, 38, 38,0.22);
+-webkit-box-shadow:  0 10px 10px rgba(41, 38, 38,0.22);
 `;
 const NavBar = styled.nav`
   width: 100%;
@@ -66,18 +66,25 @@ const Title = styled.h3`
   color: #01c7c6;
   clear: both;
 `;
+
 export const MobileNavMenu = props => {
   const links = [
     <NavLink to="/community">Pools & Spas</NavLink>,
     <NavLink to="/community">Supplies</NavLink>,
     <NavLink to="/community">Resources</NavLink>,
-    <NavLink lastBtn={true} to="/community">Services</NavLink>
+    <NavLink lastBtn={true} to="/community">
+      Services
+    </NavLink>
   ];
 
   return (
     <Wrapper>
       <BtnWrapper>
-        <i class="fa fa-times" aria-hidden="true" onClick={() => props.onClick()} />
+        <i
+          className="fa fa-times"
+          aria-hidden="true"
+          onClick={() => props.onClick()}
+        />
       </BtnWrapper>
       <Title>Menu</Title>
       <NavBar className={"mobile-nav-menu"}>

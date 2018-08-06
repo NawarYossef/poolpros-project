@@ -1,10 +1,10 @@
 import React from "react";
-import { FormTitle } from "../components/Form/FormTitle";
-import { ResultCount } from "../components/Form/ResultCount";
-import { FilterButtons } from "../components/Form/FilterButtons";
-import { DropDownButtons } from "../components/Form/DropDownButtons";
+import { FormTitle } from "./Form/FormTitle";
+import { ResultCount } from "./Form/ResultCount";
+import { FilterButtons } from "./Form/FilterButtons";
+import { DropDownButtons } from "./Form/DropDownButtons";
 import Rectangle from "../assets/rectangle-icon.png";
-import { TooTip } from "../components/Form/ToolTip";
+import { TooTip } from "./Form/ToolTip";
 import "normalize.css";
 import styled from "styled-components";
 import "../styles/main.css";

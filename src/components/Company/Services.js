@@ -14,7 +14,7 @@ const Wrapper = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 25px 10px; 
+  padding: 25px 10px;
   margin-top: 25px;
   @media (max-width: 700px) {
     margin-top: 16px;
@@ -42,7 +42,10 @@ export const Services = props => {
         {props.certifications.map((service, idx) => {
           let imgSrc = service.split(" ").join("-");
           return (
-            <ElementWrapper className={"service-flex-item"} key={idx.toString()}>
+            <ElementWrapper
+              className={"service-flex-item"}
+              key={idx.toString()}
+            >
               <img
                 src={require(`../../assets/${imgSrc}.png`)}
                 className={"service-img"}

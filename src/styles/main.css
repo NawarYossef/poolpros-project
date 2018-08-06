@@ -11,7 +11,10 @@ html, body {
 
 body {
   font-size: 1em;
+}
 
+textarea {
+  word-break: normal;
 }
 
 ul, li {
@@ -27,6 +30,7 @@ ul, li {
 
 body {
   position: relative;
+  color: #3f3f3f;
 }
 
 /* ===========*/
@@ -40,8 +44,13 @@ body {
   padding: 10px;
   font-size: 1.3em;
   margin-left: 0px;
+  color: #01c7c6 !important;
+}
+
+main .fa-times {
   color: #ffffff;
 }
+
 ul {
   margin-top: 0px;
 }
@@ -53,6 +62,7 @@ a {
 .main-nav-menu a {
   color: #083D8C !important;
 }
+
 .mobile-nav-menu a {
   color: #616161 !important;
 }
@@ -105,13 +115,7 @@ a {
   color: #4b4b4b;
 }
 
-/* ===========*/
-
-/* Modal */
-
-/* ===========*/
-
-/* code for removing spinner from input type number */
+/* filter form check-box styles */
 
 /* For Firefox */
 
@@ -119,7 +123,7 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
-/* Webkit browsers like Safari and Chrome */
+/* Safari and Chrome */
 
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -138,9 +142,9 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   display: inline-block;
   padding: 10px;
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid#3f3f3f;
   box-sizing: border-box;
-  color: black;
+  color: #3f3f3f;
   background-color: white;
   margin-bottom: 10px;
 }
@@ -152,12 +156,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   color: black;
   box-sizing: border-box;
 }
-
-/* ===========*/
-
-/* filter form check-box */
-
-/* ===========*/
 
 .label-for-checkbox {
   display: block;
@@ -211,10 +209,14 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   background: white;
 }
 
-/* ================================== */
-
 .check-box-btn-last {
   padding-right: 0px !important;
+}
+
+/* ================================== */
+
+.fa-angle-right {
+  font-size: 1.3em;
 }
 
 .tool-tip-img {
@@ -300,6 +302,7 @@ i {
 /* media query */
 
 /* ===========*/
+
 @media screen and (max-width: 1024px) {
   .border-img {
     margin-right: 5px;

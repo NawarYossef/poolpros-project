@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { FilteringForm } from "./FilteringForm";
+import { FilteringForm } from "../components/FilteringForm";
 import { SearchResults } from "../components/SearchResults";
 import { Modal } from "../components/Modal/Modal";
 import "normalize.css";

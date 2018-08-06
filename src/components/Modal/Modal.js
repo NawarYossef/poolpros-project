@@ -1,7 +1,7 @@
 import React from "react";
 import DealersData from "../../dealers-data";
 import { ModalHeader } from "./ModalHeader";
-import ModalForm from "./ModalForm";
+import ModalForm from "../../containers/ModalForm";
 import { BodyHeadingText } from "./BodyHeadingText";
 import { ModalFooter } from "./ModalFooter";
 import "normalize.css";

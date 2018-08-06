@@ -26,7 +26,7 @@ const LocationButtonWrapper = styled.li`
 export const FindPoolButton = () => {
   return (
     <LocationButtonWrapper className="find-pool-wrapper">
-      <img src={LocationIcon} className={"location-icon"} alt="img"/>
+      <img src={LocationIcon} className={"location-icon"} alt="img" />
       <Link to={"/find-pool-pro"} className={"find-pool-btn"}>
         Find a Pool Pro
       </Link>

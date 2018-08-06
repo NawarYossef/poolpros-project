@@ -4,9 +4,7 @@ import styled from "styled-components";
 import "../../styles/main.css";
 
 const Wrapper = styled.div`
-  padding-right: 20px;
-  padding-left: 32px;
-  padding-top: 20px;
+  padding: 0px 15px;
   padding-bottom: 47px;
   background-color: #083d8c;
 `;
@@ -15,6 +13,7 @@ const Text = styled.h6`
   margin: 0px;
   clear: both;
   color: #ffffff;
+  font-size: 1em;
 `;
 const Name = styled.h2`
   display: bock;
@@ -23,21 +22,15 @@ const Name = styled.h2`
   margin: 0px;
   color: #ffffff;
 `;
-const CloseButton = styled.button`
-  background-color: transparent;
-  padding: 0px;
-  border: none;
-  float: right;
-  font-weight: bold;
-  color: #ffffff;
-  position: relative;
-`;
+
 export const ModalHeader = props => {
   return (
-    <Wrapper>
-    <i className="fas fa-times" onClick={props.onClick}></i>
-      <Text>Email:</Text>
-      <Name>{props.name}</Name>
-    </Wrapper>
+    <React.Fragment>
+      <i className="fas fa-times" onClick={props.onClick} />
+      <Wrapper>
+        <Text>EMAIL:</Text>
+        <Name>{props.name}</Name>
+      </Wrapper>
+    </React.Fragment>
   );
 };

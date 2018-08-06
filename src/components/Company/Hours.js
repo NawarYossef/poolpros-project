@@ -29,7 +29,7 @@ export const Hours = props => {
   return (
     <Wrapper>
       <Message>Business Hours</Message>
-      <HoursCount>Weekdays {props.hours.fri}</HoursCount>
+      <HoursCount>Weekdays {props.hours.mon}</HoursCount>
       <HoursCount>
         Saturdays {props.hours.sat ? props.hours.sat : "CLOSED"}
       </HoursCount>

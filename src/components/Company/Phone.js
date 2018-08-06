@@ -57,18 +57,19 @@ const MobileWrapper = styled.div`
     justify-content: center;
     width: 40%;
   }
-`
+`;
 const PhoneNumber = styled.h4`
-margin: 0px;
-@media (max-width: 700px) {
-  display: none;
-}
-`
+  margin: 0px;
+  font-size: 1.5em;
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;
 const MobileNumber = styled.h4`
-@media (min-width: 701px) {
-  display: none;
-}
-`
+  @media (min-width: 701px) {
+    display: none;
+  }
+`;
 export const Phone = props => {
   return (
     <Wrapper>

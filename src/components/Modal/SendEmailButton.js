@@ -6,6 +6,8 @@ import "../../styles/main.css";
 const Button = styled.button`
   display: flex;
   margin: 0 auto;
+  font-weight: bold;
+  color: #3f3f3f;
   align-items: center;
   padding: 42px 0px;
   background: transparent;
@@ -16,7 +18,7 @@ const Button = styled.button`
   }
 `;
 
-const BtnWrapper = styled.div`
+const MobileBtnWrapper = styled.div`
   width: 95%;
   display: flex;
   align-items: center;
@@ -33,16 +35,23 @@ const ButtonMobile = styled.button`
   text-align: center;
   border: none;
 `;
+
+const PhoneBtnWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
 export const SendEmailButton = props => {
   return (
     <React.Fragment>
-      <Button>
-        Send my email
-        <i className="fas fa-angle-right" />
-      </Button>
-      <BtnWrapper>
+      <PhoneBtnWrapper>
+        <Button>
+          Send my email
+          <i className="fas fa-angle-right" />
+        </Button>
+      </PhoneBtnWrapper>
+      <MobileBtnWrapper>
         <ButtonMobile>Send</ButtonMobile>
-      </BtnWrapper>
+      </MobileBtnWrapper>
     </React.Fragment>
   );
 };

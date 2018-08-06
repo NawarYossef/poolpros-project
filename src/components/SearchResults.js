@@ -9,16 +9,16 @@ const Results = styled.section`
   margin: 50px auto 50px auto;
 `;
 const Wrapper = styled.div`
-  max-width: 95%;
+  max-width: 96%;
   position: relative;
   margin: 0 auto;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: row;
   @media (min-width: 1025px) {
-    max-width: 95%;
+    max-width: 96%;
   }
 `;
 
