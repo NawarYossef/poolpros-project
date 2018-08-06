@@ -4,7 +4,7 @@ import { Layout } from "./Layout";
 import Main from "./containers/Main";
 import history from "./history";
 import axios from 'axios';
-import styled from "styled-components";
+import styled, {injectGlobal} from "styled-components";
 import "normalize.css";
 import "./App.css";
 

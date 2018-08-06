@@ -35,7 +35,7 @@ const CloseButton = styled.button`
 export const ModalHeader = props => {
   return (
     <Wrapper>
-      <CloseButton onClick={props.onClick}>x</CloseButton>
+    <i className="fas fa-times" onClick={props.onClick}></i>
       <Text>Email:</Text>
       <Name>{props.name}</Name>
     </Wrapper>
