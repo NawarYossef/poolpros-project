@@ -48,7 +48,7 @@ nav i {
 }
 
 main .fa-times {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 ul {
