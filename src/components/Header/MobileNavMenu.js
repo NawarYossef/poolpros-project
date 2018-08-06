@@ -32,7 +32,7 @@ const ListElement = styled.li`
   text-decoration: none;
   background-color: #f6f6f6;
   display: flex;
-  margin-bottom: ${props => (props.lastBtn ? "0px" : "2px")}
+  margin-bottom: ${props => (props.lastBtn ? "0px" : "2px")};
   padding: 30px 25px;
   align-items: center;
   justify-content: space-between;

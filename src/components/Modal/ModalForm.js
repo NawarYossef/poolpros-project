@@ -13,11 +13,24 @@ const Wrapper = styled.div`
 `;
 const Form = styled.form`
   background-color: #f6f6f6;
-  padding-top: 30px;
+  padding: 20px 10px;
+  @media (max-width: 768px) {
+    padding: 0px;
+    background-color: #ffffff;
+  }
 `;
 
 const FieldTitle = styled.p`
   margin: 0px;
+  @media (max-width: 768px) {
+    font-size: 0.8em;
+  }
+`;
+const Span = styled.span`
+  margin: 0px;
+  @media (max-width: 768px) {
+    font-size: 0.8em;
+  }
 `;
 
 const FieldWrapper = styled.div`
@@ -36,6 +49,10 @@ const PhoneNumberInputWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   padding-left: 13px;
+  @media (max-width: 768px) {
+    width: 65%;
+    padding-left: 4px;
+  }
 `;
 const Input = styled.input`
   margin: 0 auto;
@@ -45,6 +62,9 @@ const Input = styled.input`
   border: 1px solid #d8d8d8;
   margin-top: 4px;
   padding-left: 13px;
+  @media (max-width: 768px) {
+    padding-left: 4px;
+  }
 `;
 const PhoneNumberInput = styled.input`
   margin: 4px 0 0 13px;
@@ -54,6 +74,11 @@ const PhoneNumberInput = styled.input`
   display: block;
   height: 45px;
   border: 1px solid #d8d8d8;
+  @media (max-width: 768px) {
+    width: 62.4%;
+    margin-left: 4px;
+  }
+  
 `;
 const Textarea = styled.input`
   margin: 0 auto;
@@ -71,7 +96,7 @@ const Line = styled.hr`
   border: 0;
   box-shadow: inset 0 12px 12px -14px rgba(0, 0, 0, 0.5);
   margin: 0 auto;
-  width: 94%;
+  width: 95%;
 `;
 export default class ModalForm extends Component {
   constructor(props) {
@@ -207,7 +232,7 @@ export default class ModalForm extends Component {
           <label htmlFor="comments">
             <FieldWrapper>
               <FieldTitle>Comments or questions</FieldTitle>
-              <span>Optional</span>
+              <Span>Optional</Span>
             </FieldWrapper>
             <Textarea
               type="text"
@@ -218,7 +243,6 @@ export default class ModalForm extends Component {
 
           <FieldWrapper>
             <FieldTitle>Do you currently own a pool or a spa?</FieldTitle>
-            <span>Optional</span>
           </FieldWrapper>
           <PoolQuestion checkBoxHandle={this.checkBoxHandle} />
           <Line />

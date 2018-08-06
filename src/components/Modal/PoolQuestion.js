@@ -27,11 +27,23 @@ export const PoolQuestion = props => {
     <BtnsWrapper>
       <List className="check-box-wrapper">
         <Element>
-          <input type="checkbox" id="check_1" name="check_1" value="yes" onClick={e => props.checkBoxHandle(e)}/>
+          <input
+            type="checkbox"
+            id="check_1"
+            name="check_1"
+            value="yes"
+            onClick={e => props.checkBoxHandle(e)}
+          />
           <label for="check_1">Yes</label>
         </Element>
         <Element>
-          <input type="checkbox" id="check_2" name="check_2" value="no" onClick={e => props.checkBoxHandle(e)}/>
+          <input
+            type="checkbox"
+            id="check_2"
+            name="check_2"
+            value="no"
+            onClick={e => props.checkBoxHandle(e)}
+          />
           <label for="check_2">No</label>
         </Element>
       </List>

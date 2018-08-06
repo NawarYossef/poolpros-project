@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FontAwesome from "react-fontawesome";
-
 import styled from "styled-components";
 import "../../styles/main.css";
 
@@ -11,9 +9,15 @@ const Container = styled.div`
 `;
 
 const InnerWrapper = styled.div`
-  width: 30%;
+  width: 34%;
   margin: 0 auto;
   padding: 14px 0px;
+  @media (max-width: 1300px) {
+    width: 40%;
+  }
+  @media (max-width: 980px) {
+    width: 50%;
+  }
 `;
 
 const NavMenu = styled.ul`
@@ -24,9 +28,13 @@ const NavMenu = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   list-style-type: none !important;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const Text = styled.p`
   color: #ffffff;
@@ -37,16 +45,16 @@ const LinkText = styled(Link)`
   color: #ffffff;
 `;
 const Element = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   list-style: none;
 `;
+
 export const Metadata = () => {
-  const links = [
-    <LinkText to={"/policy"}>Privacy Policy</LinkText>,
-    <LinkText to={"/terms-and-conditions"}>Terms and Conditions</LinkText>
-  ];
   const copyRights = (
     <Text className="copyright">
-      <FontAwesome name="copyright" />
+      <i class="far fa-copyright" />
       <span>2017</span> Pool Pros
     </Text>
   );
@@ -55,13 +63,12 @@ export const Metadata = () => {
       <InnerWrapper>
         <NavMenu>
           {copyRights}
-          {links.map((link, idx) => {
-            return (
-              <Element key={idx.toString()} className="link">
-                {link}
-              </Element>
-            );
-          })}
+          <Element key={"privacy"} className="link">
+            <LinkText to={"/policy"}>Privacy Policy</LinkText>
+          </Element>
+          <Element key={"terms"} className="link">
+            <LinkText to={"/policy"}>Terms and Conditions</LinkText>
+          </Element>
         </NavMenu>
       </InnerWrapper>
     </Container>

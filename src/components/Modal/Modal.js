@@ -23,6 +23,9 @@ const ModalBody = styled.div`
   width: 50%;
   margin: 0 auto;
   margin-top: 120px;
+  @media (max-width: 768px) {
+    width: 70%;
+  }
 `;
 export const Modal = props => {
   const company = DealersData.dealers.filter(

@@ -6,6 +6,9 @@ import "../../styles/main.css";
 const Wrapper = styled.div`
   width: 100%;
   background-color: #f6f6f6;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 const Text = styled.p`
   padding: 24px 27px;

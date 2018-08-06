@@ -10,16 +10,22 @@ const Container = styled.div`
 const Wrapper = styled.ul`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding-top: 26px;
-  padding-bottom: 31px;
-  margin-top: 38px;
+  padding: 25px 10px; 
+  margin-top: 25px;
+  @media (max-width: 700px) {
+    margin-top: 16px;
+  }
+  @media (max-width: 330px) {
+    padding: 25px 4px;
+  }
 `;
 
 const ElementWrapper = styled.li`
-  width: 50%;
+  flex: 0 0 49%;
   display: flex;
   flex-flow: wrap;
   align-items: center;

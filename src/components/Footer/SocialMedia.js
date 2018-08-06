@@ -15,6 +15,16 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
+  @media (max-width: 1300px) {
+    width: 25%;
+  }
+  @media (max-width: 980px) {
+    width: 50%;
+  }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const NavMenu = styled.ul`

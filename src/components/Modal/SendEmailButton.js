@@ -11,12 +11,38 @@ const Button = styled.button`
   background: transparent;
   text-align: center;
   border: none;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const BtnWrapper = styled.div`
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 30px 0px;
+  @media (min-width: 769px) {
+    display: none;
+  }
+`;
+const ButtonMobile = styled.button`
+  color: #0bc9c8;
+  font-weight: bold;
+  background: transparent;
+  text-align: center;
+  border: none;
 `;
 export const SendEmailButton = props => {
   return (
-    <Button>
-      Send my email
-      <i className="fas fa-angle-right" />
-    </Button>
+    <React.Fragment>
+      <Button>
+        Send my email
+        <i className="fas fa-angle-right" />
+      </Button>
+      <BtnWrapper>
+        <ButtonMobile>Send</ButtonMobile>
+      </BtnWrapper>
+    </React.Fragment>
   );
 };

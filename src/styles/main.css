@@ -221,12 +221,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   margin-left: 8px;
 }
 
-.phone-icon-desktop {
-  width: 28px;
-  height: 28px;
-  margin-right: 15px;
-}
-
 .email-icon-img {
   width: 15px;
   height: 13px;
@@ -250,14 +244,14 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 /* ===========*/
 
-.footer-logo {
-  padding-top: 36px;
-  padding-bottom: 27px;
-}
-
 .footer-icon {
   width: 17px;
   height: 16px;
+}
+
+footer i {
+  color: #ffffff !important;
+  margin-right: 2px;
 }
 
 /* ===========*/
@@ -288,10 +282,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 :-moz-placeholder {
   /* Firefox 18- */
   color: #616161;
-}
-
-.phone-number-input {
-  width: 38.4%;
 }
 
 label {

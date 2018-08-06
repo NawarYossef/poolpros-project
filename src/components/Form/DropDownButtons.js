@@ -5,6 +5,7 @@ import styled from "styled-components";
 import "../../styles/main.css";
 
 const List = styled.ul`
+  background-color: #ffffff;
   flex: 1;
   margin-bottom: 0px;
   padding-left: 0px;
